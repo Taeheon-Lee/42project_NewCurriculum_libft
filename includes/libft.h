@@ -6,7 +6,7 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 19:47:29 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/15 06:04:49 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 06:35:49 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,8 +98,10 @@ int					ft_count(char const *s, char c);
 char				*ft_make(char const *s, int len_word, int loc);
 int					ft_count_digit(int n);
 char				*ft_insert_nbr(char *arr, int n, int size);
-int					ft_loc_start(char const *s, size_t len, char const *set, size_t n);
-int					ft_loc_end(char const *s, int len, char const *set, size_t n);
+int					ft_loc_start(char const *s, size_t len, char const *set, \
+		size_t n);
+int					ft_loc_end(char const *s, int len, char const *set, \
+		size_t n);
 t_list_char			*ft_char_lstnew(char content);
 void				ft_char_lstfree(t_list_char **list);
 char				*ft_strcut(char *str, char c);
