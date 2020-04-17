@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_striter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 12:55:22 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 17:14:55 by tlee             ###   ########.fr       */
+/*   Created: 2020/04/17 00:18:15 by tlee              #+#    #+#             */
+/*   Updated: 2020/04/17 01:40:58 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+void	ft_striter(char *s, void (*f)(char*))
 {
-	int i;
-
-	i = 0;
-	while (src[i])
+	if (s == NULL || f == NULL)
+		return ;
+	while (*s)
 	{
-		dst[i] = src[i];
-		i++;
+		f(s);
+		s++;
 	}
-	dst[i] = '\0';
-	return (dst);
 }

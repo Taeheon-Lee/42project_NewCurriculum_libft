@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_strequ_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/23 14:23:00 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 17:17:12 by tlee             ###   ########.fr       */
+/*   Created: 2020/04/17 00:17:36 by tlee              #+#    #+#             */
+/*   Updated: 2020/04/17 01:40:40 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-void	ft_putendl(char const *s)
+int	ft_strequ(char const *s1, char const *s2)
 {
 	int i;
 
 	i = 0;
-	if (!s)
-		return ;
-	while (s[i])
-	{
-		write(1, &s[i], 1);
+	if (!s1 && !s2)
+		return (1);
+	if (!s1 || !s2)
+		return (0);
+	while (s1[i] && s2[i] && !(s1[i] - s2[i]))
 		i++;
-	}
-	write(1, "\n", 1);
+	if (!s1[i] && !s2[i])
+		return (1);
+	if (!s1[i] || !s2[i])
+		return (0);
+	return (0);
 }

@@ -1,21 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_insert_nbr_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/21 22:56:58 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 17:17:58 by tlee             ###   ########.fr       */
+/*   Created: 2020/04/17 00:30:51 by tlee              #+#    #+#             */
+/*   Updated: 2020/04/17 01:42:30 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-void	ft_memdel(void **ap)
+char	*ft_insert_nbr(char *arr, int n, int size)
 {
-	if (ap == NULL)
-		return ;
-	free(*ap);
-	*ap = NULL;
+	int		i;
+
+	i = size;
+	arr[0] = '0';
+	if (n == 0)
+		return (arr);
+	if (n == -2147483648)
+	{
+		arr[0] = '-';
+		arr[1] = '2';
+		n = 147483648;
+	}
+	else if (n < 0)
+	{
+		arr[0] = '-';
+		n = n * (-1);
+	}
+	else
+		i = size - 1;
+	while (n != 0)
+	{
+		arr[i--] = (n % 10) + '0';
+		n = n / 10;
+	}
+	return (arr);
 }

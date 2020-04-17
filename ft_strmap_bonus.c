@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_char_lstnew.c                                   :+:      :+:    :+:   */
+/*   ft_strmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/28 12:58:51 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 17:23:24 by tlee             ###   ########.fr       */
+/*   Created: 2020/04/17 00:19:12 by tlee              #+#    #+#             */
+/*   Updated: 2020/04/17 01:41:12 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-t_list_char	*ft_char_lstnew(char c)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	t_list_char	*new_list;
+	int			i;
+	int			len;
+	char		*arr;
 
-	if (!(new_list = (t_list_char *)malloc(sizeof(t_list_char))))
+	i = 0;
+	len = 0;
+	if (s == NULL || f == NULL)
 		return (NULL);
-	if (c)
-		new_list->content = c;
-	else
-		new_list->content = 0;
-	new_list->next = NULL;
-	return (new_list);
+	while (s[len])
+		len++;
+	arr = (char *)malloc(sizeof(char) * len + 1);
+	if (!arr)
+		return (NULL);
+	while (i < len)
+	{
+		arr[i] = f(s[i]);
+		i++;
+	}
+	arr[i] = 0;
+	return (arr);
 }

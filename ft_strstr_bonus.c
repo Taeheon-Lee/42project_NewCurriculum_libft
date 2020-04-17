@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strstr_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 15:02:07 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 17:13:08 by tlee             ###   ########.fr       */
+/*   Created: 2020/04/17 00:12:01 by tlee              #+#    #+#             */
+/*   Updated: 2020/04/17 01:41:46 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-char	*ft_strncat(char *dst, char *src, size_t num)
+char	*ft_strstr(const char *str1, const char *str2)
 {
-	size_t i;
-	size_t j;
+	const char	*s1;
+	const char	*s2;
 
-	i = 0;
-	j = 0;
-	while (dst[i])
-		i++;
-	while (src[j])
+	if (!*str2)
+		return ((char *)str1);
+	while (*str1)
 	{
-		if (j == num)
-			break ;
-		dst[i] = src[j];
-		i++;
-		j++;
+		s1 = str1;
+		s2 = str2;
+		while (*s1 && *s2 && !(*s1 - *s2))
+		{
+			s1++;
+			s2++;
+		}
+		if (!*s2)
+			return ((char *)str1);
+		str1++;
 	}
-	dst[i] = 0;
-	return (dst);
+	return (NULL);
 }

@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_digit.c                                   :+:      :+:    :+:   */
+/*   ft_strdel_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 01:40:57 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 17:23:16 by tlee             ###   ########.fr       */
+/*   Created: 2020/04/17 00:16:51 by tlee              #+#    #+#             */
+/*   Updated: 2020/04/17 01:40:34 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-int	ft_count_digit(int n)
+void	ft_strdel(char **as)
 {
-	int	cnt;
-
-	cnt = 0;
-	if (n == 0)
-		return (1);
-	while (n)
-	{
-		cnt++;
-		n = n / 10;
-	}
-	return (cnt);
+	if (!as)
+		return ;
+	free(*as);
+	*as = NULL;
 }

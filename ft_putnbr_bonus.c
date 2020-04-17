@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 13:25:51 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 17:12:45 by tlee             ###   ########.fr       */
+/*   Created: 2020/04/17 00:14:43 by tlee              #+#    #+#             */
+/*   Updated: 2020/04/17 01:39:18 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t num)
+void	ft_putnbr(int n)
 {
-	size_t i;
+	char c;
 
-	i = 0;
-	while (src[i])
+	if (n == -2147483648)
 	{
-		if (i == num)
-			return (dst);
-		dst[i] = src[i];
-		i++;
+		write(1, "-", 1);
+		write(1, "2", 1);
+		ft_putnbr(147483648);
 	}
-	while (i < num)
+	else if (n < 0)
 	{
-		dst[i] = '\0';
-		i++;
+		write(1, "-", 1);
+		ft_putnbr(n * (-1));
 	}
-	return (dst);
+	else
+	{
+		if (n >= 10)
+			ft_putnbr(n / 10);
+		c = (n % 10) + '0';
+		write(1, &c, 1);
+	}
 }

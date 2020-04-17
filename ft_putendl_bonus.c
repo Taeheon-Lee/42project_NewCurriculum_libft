@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 22:49:10 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 17:16:09 by tlee             ###   ########.fr       */
+/*   Created: 2020/04/17 00:14:13 by tlee              #+#    #+#             */
+/*   Updated: 2020/04/17 01:38:52 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-int	ft_strcmp(const char *s1, const char *s2)
+void	ft_putendl(char const *s)
 {
 	int i;
 
 	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+	if (!s)
+		return ;
+	while (s[i])
+	{
+		write(1, &s[i], 1);
 		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	}
+	write(1, "\n", 1);
 }

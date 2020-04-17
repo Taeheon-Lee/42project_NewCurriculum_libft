@@ -6,11 +6,49 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 19:35:38 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 17:16:37 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/17 00:26:29 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_count(char const *s, char c)
+{
+	int i;
+	int cnt;
+
+	i = 0;
+	cnt = 0;
+	while (s[i])
+	{
+		if (s[i] != c)
+		{
+			cnt++;
+			while (s[i] != c && s[i])
+				i++;
+		}
+		else
+			i++;
+	}
+	return (cnt);
+}
+
+char	*ft_make(char const *s, int len_word, int loc)
+{
+	char	*arr1;
+	int		cnt_arr1;
+
+	arr1 = (char *)malloc(sizeof(char) * (len_word + 1));
+	cnt_arr1 = 0;
+	while (cnt_arr1 < len_word)
+	{
+		arr1[cnt_arr1] = s[loc];
+		loc++;
+		cnt_arr1++;
+	}
+	arr1[cnt_arr1] = '\0';
+	return (arr1);
+}
 
 char		**ft_split(char const *s, char c)
 {

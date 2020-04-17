@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcut.c                                        :+:      :+:    :+:   */
+/*   ft_strclr_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/09 03:54:22 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 17:14:47 by tlee             ###   ########.fr       */
+/*   Created: 2020/04/17 00:16:22 by tlee              #+#    #+#             */
+/*   Updated: 2020/04/17 01:39:55 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-char	*ft_strcut(char *str, char c)
+void	ft_strclr(char *s)
 {
-	char	*rtnstr;
-	size_t	str_len;
-	size_t	i;
+	int i;
 
-	if (!str)
-		return (NULL);
+	if (!s)
+		return ;
 	i = 0;
-	str_len = ft_strlen(str);
-	while (str[i])
+	while (s[i])
 	{
-		if (str[i] == c)
-		{
-			i += 1;
-			if (!(rtnstr = ft_strnew(str_len - i)))
-				return (NULL);
-			rtnstr = ft_strcpy(rtnstr, &(str[i]));
-			free(str);
-			return (rtnstr);
-		}
+		s[i] = '\0';
 		i++;
 	}
-	free(str);
-	return (ft_strnew(0));
 }

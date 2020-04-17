@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_strncat_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/22 00:05:52 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 17:16:17 by tlee             ###   ########.fr       */
+/*   Created: 2020/04/17 00:10:03 by tlee              #+#    #+#             */
+/*   Updated: 2020/04/17 01:41:21 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-void	ft_strclr(char *s)
+char	*ft_strncat(char *dst, char *src, size_t num)
 {
-	int i;
+	size_t i;
+	size_t j;
 
-	if (!s)
-		return ;
 	i = 0;
-	while (s[i])
-	{
-		s[i] = '\0';
+	j = 0;
+	while (dst[i])
 		i++;
+	while (src[j])
+	{
+		if (j == num)
+			break ;
+		dst[i] = src[j];
+		i++;
+		j++;
 	}
+	dst[i] = 0;
+	return (dst);
 }

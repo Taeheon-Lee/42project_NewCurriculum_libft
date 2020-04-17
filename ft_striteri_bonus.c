@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_insert_nbr.c                                    :+:      :+:    :+:   */
+/*   ft_striteri_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 01:41:59 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 17:22:25 by tlee             ###   ########.fr       */
+/*   Created: 2020/04/17 00:18:37 by tlee              #+#    #+#             */
+/*   Updated: 2020/04/17 01:41:04 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-char	*ft_insert_nbr(char *arr, int n, int size)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int		i;
+	unsigned int i;
 
-	i = size;
-	arr[0] = '0';
-	if (n == 0)
-		return (arr);
-	if (n == -2147483648)
+	i = 0;
+	if (s == NULL || f == NULL)
+		return ;
+	while (*s)
 	{
-		arr[0] = '-';
-		arr[1] = '2';
-		n = 147483648;
+		f(i, s);
+		s++;
+		i++;
 	}
-	else if (n < 0)
-	{
-		arr[0] = '-';
-		n = n * (-1);
-	}
-	else
-		i = size - 1;
-	while (n != 0)
-	{
-		arr[i--] = (n % 10) + '0';
-		n = n / 10;
-	}
-	return (arr);
 }

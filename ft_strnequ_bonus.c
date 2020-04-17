@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_make.c                                          :+:      :+:    :+:   */
+/*   ft_strnequ_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 01:45:08 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 17:18:38 by tlee             ###   ########.fr       */
+/*   Created: 2020/04/17 00:20:12 by tlee              #+#    #+#             */
+/*   Updated: 2020/04/17 01:41:32 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-char	*ft_make(char const *s, int len_word, int loc)
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	char	*arr1;
-	int		cnt_arr1;
-
-	arr1 = (char *)malloc(sizeof(char) * (len_word + 1));
-	cnt_arr1 = 0;
-	while (cnt_arr1 < len_word)
+	if (!s1 || !s2 || !n)
+		return (1);
+	while (*s1 && *s2 && !(*s1 - *s2) && n > 1)
 	{
-		arr1[cnt_arr1] = s[loc];
-		loc++;
-		cnt_arr1++;
+		s1++;
+		s2++;
+		n--;
 	}
-	arr1[cnt_arr1] = '\0';
-	return (arr1);
+	if (*s1 - *s2 != 0)
+		return (0);
+	return (1);
 }
