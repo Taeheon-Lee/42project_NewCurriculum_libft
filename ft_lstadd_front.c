@@ -6,11 +6,11 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 06:10:57 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 06:12:04 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 17:20:20 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/libft.h"
+#include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {

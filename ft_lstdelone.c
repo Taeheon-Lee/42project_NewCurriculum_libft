@@ -6,17 +6,17 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 21:24:45 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/15 05:05:50 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 22:46:45 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-void	ft_lstdelone(t_list **alst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (!alst || !del)
+	if (!lst || !del)
 		return ;
-	del((*alst)->content);
-	free(*alst);
-	*alst = NULL;
+	del((lst)->content);
+	free(lst);
+	lst = NULL;
 }

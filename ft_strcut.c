@@ -6,11 +6,11 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 03:54:22 by tlee              #+#    #+#             */
-/*   Updated: 2020/03/09 04:04:23 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 17:14:47 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strcut(char *str, char c)
 {

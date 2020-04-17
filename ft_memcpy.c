@@ -6,11 +6,11 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 21:15:54 by tlee              #+#    #+#             */
-/*   Updated: 2020/02/28 16:54:16 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 17:18:07 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t num)
 {

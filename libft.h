@@ -6,7 +6,7 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 19:47:29 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 06:35:49 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 22:52:21 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int					ft_strcmp(const char *str1, const char *str2);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strdup(const char *s1);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
-size_t				strlcpy(char *dst, const char *src, size_t dstsize);
+size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlen(const char *str);
 char				*ft_strncat(char *dst, char *src, size_t num);
 int					ft_strncmp(const char *str1, const char *str2, size_t num);
@@ -85,11 +85,11 @@ char				*ft_strtrim(char const *s1, char const *set);
 int					ft_lstsize(t_list *lst);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 void				ft_lstadd_back(t_list **lst, t_list *new);
-void				ft_lstdelone(t_list **alst, void (*del)(void *));
-void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+void				ft_lstdelone(t_list *lst, void (*del)(void *));
+void				ft_lstiter(t_list *lst, void (*f)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void*));
 t_list				*ft_lstlast(t_list *lst);
-t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list				*ft_lstnew(void const *content);
 /*
 ** Additional Function
@@ -98,10 +98,6 @@ int					ft_count(char const *s, char c);
 char				*ft_make(char const *s, int len_word, int loc);
 int					ft_count_digit(int n);
 char				*ft_insert_nbr(char *arr, int n, int size);
-int					ft_loc_start(char const *s, size_t len, char const *set, \
-		size_t n);
-int					ft_loc_end(char const *s, int len, char const *set, \
-		size_t n);
 t_list_char			*ft_char_lstnew(char content);
 void				ft_char_lstfree(t_list_char **list);
 char				*ft_strcut(char *str, char c);

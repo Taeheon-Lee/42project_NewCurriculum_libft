@@ -6,11 +6,11 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 14:33:03 by tlee              #+#    #+#             */
-/*   Updated: 2020/02/28 16:57:57 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 17:16:30 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strcat(char *dst, const char *src)
 {

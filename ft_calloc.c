@@ -6,11 +6,11 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 06:13:18 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 06:15:25 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 17:23:36 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/libft.h"
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {

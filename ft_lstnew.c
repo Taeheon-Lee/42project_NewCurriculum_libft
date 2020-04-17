@@ -6,11 +6,11 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 20:17:31 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 06:34:16 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 22:08:33 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 t_list	*ft_lstnew(void const *content)
 {
@@ -25,8 +25,7 @@ t_list	*ft_lstnew(void const *content)
 			free(new_list);
 			return (NULL);
 		}
-		new_list->content = ft_memcpy(new_list->content, content, \
-				sizeof(content));
+		new_list->content = (char *)content;
 	}
 	else
 		new_list->content = NULL;

@@ -6,11 +6,11 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 23:11:28 by tlee              #+#    #+#             */
-/*   Updated: 2020/02/28 17:01:05 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 17:12:58 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t num)
 {

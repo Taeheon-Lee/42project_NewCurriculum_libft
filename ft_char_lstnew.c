@@ -6,11 +6,11 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 12:58:51 by tlee              #+#    #+#             */
-/*   Updated: 2020/02/28 17:21:11 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 17:23:24 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 t_list_char	*ft_char_lstnew(char c)
 {

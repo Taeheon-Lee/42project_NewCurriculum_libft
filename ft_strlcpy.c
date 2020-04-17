@@ -6,28 +6,32 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 06:23:33 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/16 06:28:19 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 19:45:46 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/libft.h"
+#include "libft.h"
 
-size_t	strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
 	char	*buffer;
+	size_t	i;
+	size_t	len;
 
+	len = ft_strlen(src);
+	if (!src || !dst)
+		return (0);
+	else if (!dstsize)
+		return (len);
 	i = -1;
-	buffer = (char *)malloc(sizeof(char) * ft_strlen(src));
-	while (src[++i])
-	{
-		if (i == dstsize - 1)
-			break ;
+	buffer = (char *)malloc(sizeof(char) * (len + 1));
+	while (++i < dstsize - 1 && src[i])
 		buffer[i] = src[i];
-	}
 	buffer[i] = 0;
 	i = -1;
 	while (buffer[++i])
 		dst[i] = buffer[i];
-	return (ft_strlen(src));
+	dst[i] = 0;
+	free(buffer);
+	return (len);
 }

@@ -6,11 +6,11 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 22:28:11 by tlee              #+#    #+#             */
-/*   Updated: 2020/02/28 17:01:51 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 17:12:12 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *str1, const char *str2, size_t len)
 {

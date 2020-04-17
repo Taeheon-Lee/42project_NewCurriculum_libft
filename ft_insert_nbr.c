@@ -6,11 +6,11 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 01:41:59 by tlee              #+#    #+#             */
-/*   Updated: 2020/02/28 17:05:17 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 17:22:25 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_insert_nbr(char *arr, int n, int size)
 {

@@ -6,11 +6,11 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 22:00:14 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/15 05:55:37 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 17:17:48 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t num)
 {

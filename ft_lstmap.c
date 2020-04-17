@@ -6,24 +6,25 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 22:40:09 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/15 05:07:07 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 22:57:49 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+t_list *ft_lstmap	(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
-	t_list	*temp;
+	void	*temp;
 
 	if (!lst)
 		return (NULL);
-	temp = f(lst);
+	temp = f(lst->content);
+	if (!temp)
+		del(temp);
 	new = (t_list *)malloc(sizeof(t_list));
-	new->content = temp->content;
-	new->next = ft_lstmap(lst->next, f);
-	free(temp);
+	new->content = temp;
+	new->next = ft_lstmap(lst->next, f, del);
 	return (new);
 }
 /*

@@ -6,11 +6,11 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 10:53:28 by tlee              #+#    #+#             */
-/*   Updated: 2020/02/28 17:00:08 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 17:13:29 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

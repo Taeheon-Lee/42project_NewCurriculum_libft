@@ -6,11 +6,11 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 01:35:04 by tlee              #+#    #+#             */
-/*   Updated: 2020/02/28 16:59:12 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 17:26:36 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 int	ft_strequ(char const *s1, char const *s2)
 {

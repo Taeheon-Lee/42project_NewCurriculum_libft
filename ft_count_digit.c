@@ -6,11 +6,11 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 01:40:57 by tlee              #+#    #+#             */
-/*   Updated: 2020/02/28 16:47:55 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/16 17:23:16 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 int	ft_count_digit(int n)
 {
