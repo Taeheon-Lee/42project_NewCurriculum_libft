@@ -6,12 +6,12 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/17 00:34:06 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/17 00:34:07 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/18 15:36:40 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBFT_BONUS_H
+# define LIBFT_BONUS_H
 
 # include <stdlib.h>
 # include <unistd.h>

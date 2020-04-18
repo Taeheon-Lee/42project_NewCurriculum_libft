@@ -6,13 +6,13 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 22:11:03 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/17 00:30:31 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/18 15:34:59 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_digit(int n)
+int		ft_count_digit(int n)
 {
 	int	cnt;
 
@@ -29,7 +29,7 @@ int	ft_count_digit(int n)
 
 char	*ft_insert_nbr(char *arr, int n, int size)
 {
-	int		i;
+	int	i;
 
 	i = size;
 	arr[0] = '0';
@@ -56,7 +56,7 @@ char	*ft_insert_nbr(char *arr, int n, int size)
 	return (arr);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*arr;
 	int		cnt;

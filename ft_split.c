@@ -6,13 +6,13 @@
 /*   By: tlee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 19:35:38 by tlee              #+#    #+#             */
-/*   Updated: 2020/04/17 00:26:29 by tlee             ###   ########.fr       */
+/*   Updated: 2020/04/18 15:37:26 by tlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count(char const *s, char c)
+int		ft_count(char const *s, char c)
 {
 	int i;
 	int cnt;
@@ -50,7 +50,7 @@ char	*ft_make(char const *s, int len_word, int loc)
 	return (arr1);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		len_word;
